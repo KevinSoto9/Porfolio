@@ -1,0 +1,31 @@
+---
+import FormacionItem from "./FormacionItem.astro";
+
+const FORMACION = [
+  {
+    title: "Curso de especialización de Ciberseguridad",
+    place: "MEDAC",
+    date: "2025 - Actualmente",
+  },
+  {
+    title: "Grado Superior en Desarrollo de Aplicaciones Web",
+    place: "I.E.S Salduba",
+    date: "2022 - 2024",
+  },
+  {
+    title: "Bachillerato Tecnológico",
+    place: "I.E.S Victoria Kent",
+    date: "2020 - 2022",
+  },
+];
+---
+
+<ol class="flex flex-col items-stretch justify-center ml-0 sm:-ml-5 sm:flex-row sm:items-stretch">
+    {FORMACION.map((formacion, index) => (
+      <li class="mb-8 sm:mb-0 sm:mr-6 h-full flex flex-col justify-stretch">
+        <FormacionItem {...formacion} />
+      </li>
+    ))}
+  </ol>
+  
+

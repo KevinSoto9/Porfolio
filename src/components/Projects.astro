@@ -1,0 +1,41 @@
+---
+const PROJECTS = [
+  {
+    title:
+      "Como Usar Volatilty3 - Una aplicación web interactiva para aprender a usar Volatility3",
+    description:
+      "Una aplicación web interactiva para aprender a usar Volatility3, la herramienta de análisis forense de memoria.",
+    link: "https://como-usar-volatility.vercel.app/",
+    github: "https://github.com/KevinSoto9/ComoUsarVolatility",
+    image: "/projects/Volatility.webp",
+    tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "React"],
+  },
+  {
+    title: "Batman Wiki - Una wiki interactiva sobre el universo de Batman",
+    description:
+      "Una wiki interactiva sobre el universo de Batman, recupera información y muestra imágenes de los personajes, lugares y eventos más importantes de Gotham.",
+    link: "https://batman-wiki.vercel.app/",
+    github: "https://github.com/KevinSoto9/BatmanWiki",
+    image: "/projects/BatmanWiki.webp",
+    tags: ["TypeScript", "React", "Tailwind CSS"],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, link, github, image, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-blue-200/90 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul>
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      <img 
+      class="rounded-lg shadow-2xl shadow-white/10" 
+      src={image} 
+      alt={`Captura de pantalla del proyecto ${image}`} />
+    </article>
+  ))
+}
