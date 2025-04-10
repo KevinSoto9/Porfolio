@@ -13,8 +13,8 @@ import '@fontsource-variable/onest';
 		<meta name="generator" content={Astro.generator} />
 		<title>Portfolio de Kevin Andrés Soto Briceño - Desarrollador y Programador Web</title>
 	</head>
-	<body class="">
-		<div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#69a_150%)]"></div>
+	<body class="relative text-black dark:text-white">
+		<div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_10%,#007985_150%)]"></div>
 		<Header/>
 		<slot />
 		<Footer/>
@@ -36,6 +36,7 @@ import '@fontsource-variable/onest';
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+		overscroll-behavior: none;
 	}
 
 	@media (prefers-reduced-motion: reduce) {
@@ -43,4 +44,10 @@ import '@fontsource-variable/onest';
 			scroll-behavior: auto;
 		}
 	}
+
+	@media (prefers-color-scheme: dark) {
+        body {
+          color: rgba(255, 255, 255, 0.9);
+        }
+      }
 </style>

@@ -1,4 +1,32 @@
 ---
+import NextJS from "./icons/NextJS.astro";
+import React from "./icons/React.astro"; 
+import TypeScript from "./icons/TypeScript.astro";
+import Tailwind from "./icons/Tailwind.astro";
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    color: "bg-black text-white",
+    icon : NextJS,
+  },
+  REACT: {
+    name: "React",
+    color: "bg-[#61DAFB]/50 text-white",
+    icon: React,
+    },
+    TYPESCRIPT: {
+    name: "TypeScript",
+    color: "bg-[#3178C6]/70 text-white",
+    icon: TypeScript,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    color: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+};
+
 const PROJECTS = [
   {
     title:
@@ -8,7 +36,7 @@ const PROJECTS = [
     link: "https://como-usar-volatility.vercel.app/",
     github: "https://github.com/KevinSoto9/ComoUsarVolatility",
     image: "/projects/Volatility.webp",
-    tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "React"],
+    tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.REACT, TAGS.TAILWIND],
   },
   {
     title: "Batman Wiki - Una wiki interactiva sobre el universo de Batman",
@@ -17,7 +45,7 @@ const PROJECTS = [
     link: "https://batman-wiki.vercel.app/",
     github: "https://github.com/KevinSoto9/BatmanWiki",
     image: "/projects/BatmanWiki.webp",
-    tags: ["TypeScript", "React", "Tailwind CSS"],
+    tags: [TAGS.TYPESCRIPT, TAGS.REACT, TAGS.TAILWIND],
   },
 ];
 ---
@@ -27,15 +55,21 @@ const PROJECTS = [
     <article>
       <h3 class="text-2xl font-semibold text-blue-200/90 mb-2">{title}</h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul>
+      <ul class="flex gap-x-4 flex-row">
         {tags.map((tag) => (
-          <li>{tag}</li>
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.color} py-1 px-2`}>
+            <tag.icon class="size-4"></tag.icon>
+            {tag.name}
+          </span>
+          </li>
         ))}
       </ul>
-      <img 
-      class="rounded-lg shadow-2xl shadow-white/10" 
-      src={image} 
-      alt={`Captura de pantalla del proyecto ${image}`} />
+      <img
+        class="rounded-lg shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
     </article>
   ))
 }
