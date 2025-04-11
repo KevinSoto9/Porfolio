@@ -1,21 +1,23 @@
 ---
 import NextJS from "./icons/NextJS.astro";
-import React from "./icons/React.astro"; 
+import React from "./icons/React.astro";
 import TypeScript from "./icons/TypeScript.astro";
 import Tailwind from "./icons/Tailwind.astro";
+import Github from "./icons/Github.astro";
+import Url from "./icons/Url.astro";
 
 const TAGS = {
   NEXT: {
     name: "Next.js",
     color: "bg-black text-white",
-    icon : NextJS,
+    icon: NextJS,
   },
   REACT: {
     name: "React",
     color: "bg-[#61DAFB]/50 text-white",
     icon: React,
-    },
-    TYPESCRIPT: {
+  },
+  TYPESCRIPT: {
     name: "TypeScript",
     color: "bg-[#3178C6]/70 text-white",
     icon: TypeScript,
@@ -52,24 +54,50 @@ const PROJECTS = [
 
 {
   PROJECTS.map(({ title, description, link, github, image, tags }) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-blue-200/90 mb-2">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-4 flex-row">
+    <article class="mb-28">
+      <h3 class="text-xl md:text-2xl font-semibold text-blue-200/90 mb-3">
+        {title}
+      </h3>
+      <p class="text-base md:text-lg mb-5 text-pretty">{description}</p>
+      <ul class="flex gap-4 md:gap-x-4 flex-wrap md:flex-row mb-2">
         {tags.map((tag) => (
           <li>
-            <span class={`flex gap-x-2 rounded-full text-xs ${tag.color} py-1 px-2`}>
-            <tag.icon class="size-4"></tag.icon>
-            {tag.name}
-          </span>
+            <span
+              class={`flex gap-x-2 rounded-full border border-white/50 text-xs ${tag.color} py-1 px-2`}
+            >
+              <tag.icon class="size-4 " />
+              {tag.name}
+            </span>
           </li>
         ))}
       </ul>
       <img
-        class="rounded-lg shadow-2xl shadow-white/10"
+        class="rounded-lg shadow-2xl shadow-white/20 mt-6 mb-6"
         src={image}
         alt={`Captura de pantalla del proyecto ${image}`}
       />
+      <ul class="flex gap-4 md:gap-x-4 flex-wrap md:flex-row mt-4">
+        <li>
+          <span
+            class={`flex gap-x-3 rounded-2xl border border-white/50 text-lg py-1.5 px-4 bg-gray-800/90 text-white`}
+          >
+            <a class="flex items-center gap-x-3" href={github}>
+              <Github class="size-5" />
+              Codigo
+            </a>
+          </span>
+        </li>
+        <li>
+          <span
+            class={`flex items-center gap-x-3 rounded-2xl border border-white/50 text-lg py-1.5 px-4 bg-gray-800/90 text-white`}
+          >
+            <a class="flex items-center gap-x-3" href={link}>
+              <Url class="size-5" />
+              Preview
+            </a>
+          </span>
+        </li>
+      </ul>
     </article>
   ))
 }
