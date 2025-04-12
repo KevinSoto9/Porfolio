@@ -3,7 +3,12 @@ import NextJS from "./icons/NextJS.astro";
 import React from "./icons/React.astro";
 import TypeScript from "./icons/TypeScript.astro";
 import Tailwind from "./icons/Tailwind.astro";
+import HTML from "./icons/HTML.astro";
+import CSS from "./icons/CSS.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import PHP from "./icons/PHP.astro";
 import Github from "./icons/Github.astro";
+import CSharp from "./icons/CSharp.astro";
 import Url from "./icons/Url.astro";
 
 const TAGS = {
@@ -24,8 +29,33 @@ const TAGS = {
   },
   TAILWIND: {
     name: "Tailwind CSS",
-    color: "bg-[#003159] text-white",
+    color: "bg-[#003159]/70 text-white",
     icon: Tailwind,
+  },
+  HTML: {
+    name: "HTML",
+    color: "bg-[#E34F26]/70 text-white",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    color: "bg-[#1572B6]/70 text-white",
+    icon: CSS,
+  },
+  JS: {
+    name: "JavaScript",
+    color: "bg-[#F7DF1E]/90 text-black",
+    icon: JavaScript,
+  },
+  PHP: {
+    name: "PHP",
+    color: "bg-[#777BB4]/70 text-white",
+    icon: PHP,
+  },
+  CSharp: {
+    name: "C#",
+    color: "bg-[#68217A]/70 text-white",
+    icon: CSharp,
   },
 };
 
@@ -81,7 +111,7 @@ const PROJECTS = [
           <span
             class={`flex gap-x-3 rounded-2xl border border-white/50 text-lg py-1.5 px-4 bg-gray-800/90 text-white`}
           >
-            <a class="flex items-center gap-x-3" href={github}>
+            <a target="_blank" class="flex items-center gap-x-3" href={github}>
               <Github class="size-5" />
               Codigo
             </a>
@@ -91,7 +121,7 @@ const PROJECTS = [
           <span
             class={`flex items-center gap-x-3 rounded-2xl border border-white/50 text-lg py-1.5 px-4 bg-gray-800/90 text-white`}
           >
-            <a class="flex items-center gap-x-3" href={link}>
+            <a target="_blank" class="flex items-center gap-x-3" href={link}>
               <Url class="size-5" />
               Preview
             </a>
