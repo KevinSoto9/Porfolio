@@ -72,9 +72,9 @@ Busco oportunidades para aplicar mis conocimientos en desarrollo web y cibersegu
 
 ¿Buscas un desarrollador web comprometido y en constante crecimiento? ¡Hablemos!
 
-- 📧 Email: [tu-email@ejemplo.com](kevinS9sotob@hotmail.com)
-- 💼 LinkedIn: [Tu Perfil](https://www.linkedin.com/in/kevin-andr%C3%A9s-soto-brice%C3%B1o-833a8a31b/)
-- 🌐 Portfolio: [tu-portfolio.com](https://portfolio-kevinsoto9s-projects.vercel.app/)
+- 📧 [Email:](kevinS9sotob@hotmail.com)
+- 💼 [LinkedIn:](https://www.linkedin.com/in/kevin-andr%C3%A9s-soto-brice%C3%B1o-833a8a31b/)
+- 🌐 [Portfolio:](https://portfolio-kevinsoto9s-projects.vercel.app/)
 
 ## 📄 Licencia
 
