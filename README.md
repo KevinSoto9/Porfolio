@@ -53,7 +53,7 @@ Busco oportunidades para aplicar mis conocimientos en desarrollo web y cibersegu
 - Diseño moderno y responsivo
 - Optimizado para SEO
 - Implementación de modo oscuro
-- [Ver Proyecto](https://tu-portfolio.com)
+- [Ver Proyecto](https://portfolio-kevinsoto9s-projects.vercel.app/)
 
 ## 💡 Lo Que Me Hace Diferente
 
@@ -72,9 +72,9 @@ Busco oportunidades para aplicar mis conocimientos en desarrollo web y cibersegu
 
 ¿Buscas un desarrollador web comprometido y en constante crecimiento? ¡Hablemos!
 
-- 📧 Email: [tu-email@ejemplo.com](mailto:tu-email@ejemplo.com)
-- 💼 LinkedIn: [Tu Perfil](https://www.linkedin.com/in/tu-perfil)
-- 🌐 Portfolio: [tu-portfolio.com](https://tu-portfolio.com)
+- 📧 Email: [tu-email@ejemplo.com](kevinS9sotob@hotmail.com)
+- 💼 LinkedIn: [Tu Perfil](https://www.linkedin.com/in/kevin-andr%C3%A9s-soto-brice%C3%B1o-833a8a31b/)
+- 🌐 Portfolio: [tu-portfolio.com](https://portfolio-kevinsoto9s-projects.vercel.app/)
 
 ## 📄 Licencia
 
