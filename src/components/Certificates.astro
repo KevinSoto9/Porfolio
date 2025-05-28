@@ -1,0 +1,79 @@
+---
+const CERTIFICATES = [
+  {
+    img: "/projects/Aprende lo último de JavaScript (ES2023 & ES2024).webp",
+    title: "Aprende lo último de JavaScript (ES2023 & ES2024)",
+    logo: "https://media.licdn.com/dms/image/v2/C4D0BAQEJtiWsqQ3A4w/company-logo_100_100/company-logo_100_100/0/1630487671967/midudev_logo?e=1753920000&v=beta&t=dMwvuNmK6zNzbiy9NVEwQRC-rpLziO_B3EQsGB3njc8",
+    empresa: "Midudev",
+    fecha: "Mayo 2025",
+    link: "https://certificados.midudev.com/22153cfb-a492-466b-8d2b-81f4e6c3089c.pdf",
+  },
+  {
+    img: "/projects/Curso Intensivo de Model Context Protocol.webp",
+    title: "Curso Intensivo de Model Context Protocol",
+    logo: "https://media.licdn.com/dms/image/v2/C4D0BAQEJtiWsqQ3A4w/company-logo_100_100/company-logo_100_100/0/1630487671967/midudev_logo?e=1753920000&v=beta&t=dMwvuNmK6zNzbiy9NVEwQRC-rpLziO_B3EQsGB3njc8",
+    empresa: "Midudev",
+    fecha: "Mayo 2025",
+    link: "https://certificados.midudev.com/18bcc700-8230-419d-914e-2ae0cee308f6.pdf",
+  },
+  {
+    img: "/projects/Análisis forense básico en sistemas Windows.webp",
+    title: "Análisis forense básico en sistemas Windows",
+    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQFI49yiiSnKeQ/company-logo_100_100/company-logo_100_100/0/1688551096102/openwebinars_logo?e=1753920000&v=beta&t=88QYLdHzQ44vblvgCwIp89RfftL8wyEXNTExyPdIJ4k",
+    empresa: "OpenWebinars",
+    fecha: "Marzo 2025",
+    link: "https://openwebinars.net/cert/e47b",
+  },
+];
+---
+
+{
+  CERTIFICATES.map(({ img, title, logo, empresa, fecha, link }) => (
+    <div class="max-w-xl bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mb-20">
+      <a href={link} target="_blank" rel="noopener">
+        <img class="rounded-t-lg" src={img} alt="" />
+      </a>
+      <div class="p-5">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {title}
+        </h5>
+
+        <div class="flex items-center mb-3 gap-x-2">
+          <img
+            class="size-10 "
+            src={logo}
+            alt="Kevin Andrés Soto Briceño"
+          />
+          <p class="font-normal text-gray-800 dark:text-gray-300">
+            Empresa Emisora: {empresa}
+          </p>
+        </div>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-sm">
+          Fecha de expedicion: {fecha}
+        </p>
+        <a
+          href={link}
+          target="_blank" rel="noopener"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Ver Certificado
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="https://certificados.midudev.com/22153cfb-a492-466b-8d2b-81f4e6c3089c.pdf"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  ))
+}
