@@ -1,6 +1,14 @@
 ---
 const CERTIFICATES = [
   {
+    img: "/projects/IA responsable con GitHub Copilot.webp",
+    title: "IA responsable con GitHub Copilot",
+    logo: "https://media.licdn.com/dms/image/v2/D560BAQH32RJQCl3dDQ/company-logo_100_100/B56ZYQ0mrGGoAU-/0/1744038948046/microsoft_logo?e=1753920000&v=beta&t=ChsEDHgJwp0H6KRiYreYON89ZaIeznxd1jkF-K3NoxU",
+    empresa: "Microsoft",
+    fecha: "Mayo 2025",
+    link: "https://www.linkedin.com/in/kevin-andr%C3%A9s-soto-brice%C3%B1o-833a8a31b/details/certifications/1748629800536/single-media-viewer/?profileId=ACoAAFEjuCcBWJ-kLVnKiXYQ49dBdR6qlLyOGrA",
+  },
+  {
     img: "/projects/Crea tu propia aplicación con Inteligencia Artificial.webp",
     title: "Crea tu propia aplicación con Inteligencia Artificial",
     logo: "https://media.licdn.com/dms/image/v2/C4D0BAQFXfh_z3OgBWA/company-logo_100_100/company-logo_100_100/0/1671022228762/nuclio_logo?e=1753920000&v=beta&t=zkCJhQRFCJlDrm_bgRsoPj43AE3K9Qsi2IpOo_fGJjk",
@@ -35,20 +43,21 @@ const CERTIFICATES = [
 ];
 ---
 
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-6">
 {
   CERTIFICATES.map(({ img, title, logo, empresa, fecha, link }) => (
-    <div class="max-w-xl bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mb-20">
+    <div class="max-w-xl bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mb-10">
       <a href={link} target="_blank" rel="noopener">
         <img class="rounded-t-lg" src={img} alt="" />
       </a>
       <div class="p-5">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <h5 class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {title}
         </h5>
 
         <div class="flex items-center mb-3 gap-x-2">
           <img
-            class="size-10 "
+            class="size-8  md:size-10"
             src={logo}
             alt="Kevin Andrés Soto Briceño"
           />
@@ -68,7 +77,7 @@ const CERTIFICATES = [
           <svg
             class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
             aria-hidden="true"
-            xmlns="https://certificados.midudev.com/22153cfb-a492-466b-8d2b-81f4e6c3089c.pdf"
+            xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 14 10"
           >
@@ -85,3 +94,4 @@ const CERTIFICATES = [
     </div>
   ))
 }
+</div>
