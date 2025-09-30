@@ -1,0 +1,81 @@
+---
+import React from "./icons/React.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import HTML from "./icons/HTML.astro";
+import CSS from "./icons/CSS.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import PHP from "./icons/PHP.astro";
+import CSharp from "./icons/CSharp.astro";
+
+const SKILLS = [
+  {
+    category: "Frontend",
+    skills: [
+      { name: "React", icon: React, level: "Avanzado" },
+      { name: "TypeScript", icon: TypeScript, level: "Avanzado" },
+      { name: "Next.js", icon: NextJS, level: "Intermedio" },
+      { name: "JavaScript", icon: JavaScript, level: "Avanzado" },
+      { name: "HTML5", icon: HTML, level: "Avanzado" },
+      { name: "CSS3", icon: CSS, level: "Avanzado" },
+      { name: "Tailwind CSS", icon: Tailwind, level: "Avanzado" },
+    ]
+  },
+  {
+    category: "Backend",
+    skills: [
+      { name: "PHP", icon: PHP, level: "Intermedio" },
+      { name: "C#", icon: CSharp, level: "Intermedio" },
+    ]
+  },
+  {
+    category: "Seguridad",
+    skills: [
+      { name: "Análisis Forense", level: "Intermedio" },
+      { name: "Seguridad Web", level: "Intermedio" },
+      { name: "Volatility3", level: "Intermedio" },
+    ]
+  }
+];
+
+const getLevelColor = (level: string) => {
+  switch (level) {
+    case "Avanzado":
+      return "bg-green-500";
+    case "Intermedio":
+      return "bg-yellow-500";
+    case "Básico":
+      return "bg-blue-500";
+    default:
+      return "bg-gray-500";
+  }
+};
+---
+
+<div class="space-y-8">
+  {SKILLS.map(({ category, skills }) => (
+    <div>
+      <h3 class="text-lg font-semibold text-blue-200/90 mb-4">{category}</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {skills.map((skill) => (
+          <div class="bg-gray-800/50 rounded-lg p-4 border border-gray-700 hover:border-blue-500/50 transition-colors">
+            <div class="flex items-center gap-3 mb-2">
+              {skill.icon && <skill.icon class="size-6" />}
+              <span class="font-medium text-white">{skill.name}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="flex-1 bg-gray-700 rounded-full h-2">
+                <div 
+                  class={`h-2 rounded-full ${getLevelColor(skill.level)}`}
+                  style={`width: ${skill.level === 'Avanzado' ? '90%' : skill.level === 'Intermedio' ? '70%' : '50%'}`}
+                ></div>
+              </div>
+              <span class="text-sm text-gray-400">{skill.level}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
